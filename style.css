@@ -1,0 +1,49 @@
+.w-25 {
+  position: relative;
+}
+
+img.mc {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+img.visa {
+  display: none;
+}
+
+img.visa.view {
+  display: block;
+}
+
+img.mc.view {
+  display: block;
+}
+
+#container-card {
+  position: relative;
+}
+#front-card {
+  transition: 0.5s;
+}
+#front-card:hover {
+  transform: translateX(50%);
+}
+
+#front-back {
+  transition: 0.5s;
+}
+#front-back:hover {
+  transform: translateX(50%);
+}
+
+#NameOnDebitCardMain {
+  text-transform: uppercase;
+}
+.wrong {
+  outline: 3px solid rgba(255, 0, 0, 0.5);
+}
+.wrong:focus {
+  outline: 5px solid rgba(255, 0, 0, 0.26);
+}

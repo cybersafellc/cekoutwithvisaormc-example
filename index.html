@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="cotainer overflow-hidden">
+      <div class="row">
+        <div id="container-card" style="height: 100vh" class="col-md-4 gap-4 bg-primary d-flex flex-column align-items-center justify-content-center">
+          <div style="height: 200px; width: 360px" class="card rounded-4 bg-dark shadow-lg p-3 d-flex" id="front-card">
+            <div class="text-white d-flex w-100 justify-content-between">
+              <p class="fw-bold">Debit Card</p>
+              <div class="w-25">
+                <img id="outputLogovisa" class="w-100 visa" src="visa.png" alt="" />
+                <img id="outputLogoMc" class="w-75 mc" src="mastercard.png" alt="" />
+              </div>
+            </div>
+            <div><img style="width: 40px" src="pngwing.com.png" alt="" class="" /></div>
+            <div class="d-flex justify-content-center align-items-center"><p id="numberCardOutput" class="text-white fs-5">4444 4444 4444 4444</p></div>
+            <div class="w-100 d-flex align-items-between flex-column">
+              <span class="w-100 d-flex justify-content-between text-danger fs-6">Expired End <span id="NameOnDebitCardMain" class="text-warning">SATOSHI NAKAMOTO</span></span> <span id="expoutput" class="fs-6 text-white">12/2024</span>
+            </div>
+          </div>
+          <div style="height: 200px; width: 360px" class="card rounded-4 bg-dark shadow-lg d-flex flex-column" id="front-back">
+            <div style="height: 50px" class="bg-black mt-4"></div>
+            <div class="w-100 d-flex justify-content-center">
+              <div class="bg-danger mt-2 w-75 bg-white d-flex flex-column justify-content-center align-items-end px-4"><p id="cvvOutput" class="d-flex align-items-center fw-bold">123</p></div>
+            </div>
+          </div>
+
+          <div style="height: 200px; width: 360px" class="card p-3 rounded-4 bg-dark shadow-lg d-flex flex-column" id="front-back">
+            <div><span class="fs-5 text-white">Donation Card</span></div>
+            <div>
+              <span class="fs-6 text-warning">FROM : <span style="text-transform: uppercase" id="outputGiftCard">SATOSHI NAKAMOTO</span> </span>
+            </div>
+            <div class="container-fluid d-flex justify-content-center mt-3">1,<span class="fs-1 text-success">$</span><span id="outputValueDonate" class="fs-1 text-success">100</span></div>
+            <div class="mt-3 container-fluid d-flex justify-content-center"><span class="fs-6 text-white opacity-25">Thanks for your Donate </span></div>
+          </div>
+        </div>
+        <div style="height: 100vh" class="col-md-8 d-flex align-items-center">
+          <div class="container w-75">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Name</span>
+              <input id="nameOnCard" type="text" style="text-transform: uppercase" class="form-control" placeholder="SATOSHI NAKAMOTO" aria-label="Username" aria-describedby="basic-addon1" />
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Number Card</span>
+              <input id="numberCardInput" maxlength="19" type="text" class="form-control" placeholder="4527-XXXX-XXXX-XXXX" aria-label="Username" aria-describedby="basic-addon1" />
+            </div>
+            <div class="input-group mb-3 w-100">
+              <span class="input-group-text" id="basic-addon1">Expired date</span>
+              <input id="ExpiredDateMonth" maxlength="7" type="text" class="form-control" placeholder="12/2024" aria-label="Username" aria-describedby="basic-addon1" />
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">CVV</span>
+              <input id="inputCVV" maxlength="3" type="text" class="form-control" placeholder="123" aria-label="Username" aria-describedby="basic-addon1" />
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text d-flex justify-content-center align-items-center" id="basic-addon1"
+                ><img style="width: 30px" src="visa.png" alt="" /><span style="width: 10px"></span><img style="width: 30px" src="mastercard.png" alt=""
+              /></span>
+              <div class="form-floating">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                  <option selected value="3">Open this select menu</option>
+                  <option value="1">Visa</option>
+                  <option value="2">Mastercard</option>
+                </select>
+                <label for="floatingSelect">Visa / Mastercard</label>
+              </div>
+            </div>
+
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">ZIP Code</span>
+              <input maxlength="5" type="text" class="form-control" placeholder="08276" aria-label="Username" aria-describedby="basic-addon1" />
+            </div>
+            <label class="fs-6 opacity-50">Value Donate</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text">$</span>
+              <input id="inputValueDonate" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" />
+              <span class="input-group-text">.00</span>
+            </div>
+            <label class="fs-6 opacity-50">Email Address</label>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="satoshi" aria-label="Username" />
+              <span class="input-group-text">@</span>
+              <input type="text" class="form-control" placeholder="example.com" aria-label="Server" />
+            </div>
+
+            <div class="input-group mb-3">
+              <span class="input-group-text">Support Message</span>
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <div class="input-group w-100 d-flex justify-content-end">
+              <button type="button" class="btn btn-primary">Donate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="js/java.js"></script>
+  </body>
+</html>
